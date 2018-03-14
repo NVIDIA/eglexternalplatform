@@ -177,17 +177,20 @@ entrypoint layer will in turn pass the structure to all export and hook
 functions which take another platform's EGLDisplay, or which do not take an
 EGLDisplay as input (client extensions).
 
-EGLDisplay creation operations will be forwarded to the EGL platform library
+All EGLDisplay creation operations will be forwarded to the EGL platform library
 `getPlatformDisplay()` export. This gives the EGL entrypoint layer the ability
 to track which EGLDisplay belongs to which platform in order to dispatch
 subsequent functions.
 
-EGLSurface creation operations will be forwarded to the appropriate EGL platform
-library hooks as they are required to be externally implemented for applications
-to be able to present buffers onto a surface.
+All EGLSurface creation operations will also be forwarded to the appropriate EGL
+platform library hooks. They are required to be externally implemented for
+applications to be able to present buffers onto a surface.
 
 Any other EGL object creation operation can be also hooked, but the internal
-handle must be always returned,
+handle must be always returned.
+
+Note that, by design, all object creation operations must be hooked for objects
+that are currently required to be externally backed (EGLDisplay and EGLSurface).
 
 Some functions need to be handled by a particular EGL platform library, but
 either do not take an EGLDisplay handle or take an EGLDisplay handle that
