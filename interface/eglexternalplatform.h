@@ -261,6 +261,10 @@ struct EGLExtDriver {
     PEGLEXTFNSETERROR           setError;
     PEGLEXTFNDEBUGMESSAGE       debugMessage;
     PEGLEXTFNSTREAMSWAPINTERVAL streamSwapInterval;
+#if EGL_EXTERNAL_PLATFORM_HAS(DRIVER_VERSION)
+    int major;
+    int minor;
+#endif
 };
 
 #endif // EGL_EXTERNAL_PLATFORM_H

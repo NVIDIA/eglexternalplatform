@@ -48,7 +48,7 @@
 #if !defined(EGL_EXTERNAL_PLATFORM_VERSION_MAJOR)
  #define EGL_EXTERNAL_PLATFORM_VERSION_MAJOR                      1
  #if !defined(EGL_EXTERNAL_PLATFORM_VERSION_MINOR)
-  #define EGL_EXTERNAL_PLATFORM_VERSION_MINOR                     0
+  #define EGL_EXTERNAL_PLATFORM_VERSION_MINOR                     1
  #endif
 #elif !defined(EGL_EXTERNAL_PLATFORM_VERSION_MINOR)
  #define EGL_EXTERNAL_PLATFORM_VERSION_MINOR                      0
@@ -156,5 +156,14 @@
  *            [...]
  *        }
  */
+
+/*
+ * DRIVER_VERSION
+ *
+ * <major> and <minor> fields added to EGLExtDriver for drivers to let the
+ * external platform know the supported EGL version
+ */
+#define EGL_EXTERNAL_PLATFORM_DRIVER_VERSION_SINCE_MAJOR 1
+#define EGL_EXTERNAL_PLATFORM_DRIVER_VERSION_SINCE_MINOR 1
 
 #endif // EGL_EXTERNAL_PLATFORM_VERSION_H
