@@ -11,7 +11,7 @@ implementation specifics out of EGL drivers by using application-facing EGL
 functions.
 
 Examples of low-level EGL platforms are `EGL_EXT_platform_device` or
-`EGL_KHR_platform_gbm`.
+`EGL_MESA_platform_surfaceless`.
 
 
 Installing the interface
