@@ -81,6 +81,11 @@ typedef EGLBoolean (*PEGLEXTFNLOADEGLEXTERNALPLATFORM) (int major, int minor, co
  *
  * If all resources are properly freed, EGL_TRUE is returned and the given
  * platform data pointer becomes invalid. Otherwise, EGL_FALSE is returned.
+ *
+ * Prior to version 1.2, the driver called this after it had finished most of
+ * its internal teardown, so calling into the driver was not safe. In version
+ * 1.2 or later, however, it's safe to call into the driver, and any internal
+ * EGLDisplays will still be valid.
  */
 typedef EGLBoolean (*PEGLEXTFNUNLOADEGLEXTERNALPLATFORM) (void *platformData);
 

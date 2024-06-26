@@ -48,7 +48,7 @@
 #if !defined(EGL_EXTERNAL_PLATFORM_VERSION_MAJOR)
  #define EGL_EXTERNAL_PLATFORM_VERSION_MAJOR                      1
  #if !defined(EGL_EXTERNAL_PLATFORM_VERSION_MINOR)
-  #define EGL_EXTERNAL_PLATFORM_VERSION_MINOR                     1
+  #define EGL_EXTERNAL_PLATFORM_VERSION_MINOR                     2
  #endif
 #elif !defined(EGL_EXTERNAL_PLATFORM_VERSION_MINOR)
  #define EGL_EXTERNAL_PLATFORM_VERSION_MINOR                      0
@@ -165,5 +165,14 @@
  */
 #define EGL_EXTERNAL_PLATFORM_DRIVER_VERSION_SINCE_MAJOR 1
 #define EGL_EXTERNAL_PLATFORM_DRIVER_VERSION_SINCE_MINOR 1
+
+/*
+ * Safer unloading.
+ *
+ * Starting in version 1.2, it's safe to call into the driver from the
+ * unloadEGLExternalPlatform callback.
+ */
+#define EGL_EXTERNAL_PLATFORM_DRIVER_SAFE_UNLOAD_SINCE_MAJOR 1
+#define EGL_EXTERNAL_PLATFORM_DRIVER_SAFE_UNLOAD_SINCE_MINOR 2
 
 #endif // EGL_EXTERNAL_PLATFORM_VERSION_H

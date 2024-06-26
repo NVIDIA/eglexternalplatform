@@ -1,5 +1,5 @@
 project('eglexternalplatform',
-  version : '1.1')
+  version : '1.2')
 
 pkg = import('pkgconfig')
 pkg.generate(filebase: 'eglexternalplatform',
