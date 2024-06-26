@@ -30,6 +30,9 @@ copied to an appropriate **pkg-config** configuration directory (e.g.
 A `meson.build` file is also included, which will handle installing the headers
 and generating a matching eglexternalplatform.pc file.
 
+Alternately, `meson.build` has the necessary `override_dependency` call to work
+as a Meson subproject.
+
 Definitions
 -----------
 

@@ -10,3 +10,8 @@ install_headers(
   'interface/eglexternalplatform.h',
   'interface/eglexternalplatformversion.h',
 )
+
+eglexternalplatform_dep = declare_dependency(
+  include_directories: include_directories('interface'),
+)
+meson.override_dependency('eglexternalplatform', eglexternalplatform_dep)
