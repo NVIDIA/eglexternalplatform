@@ -19,16 +19,8 @@ Installing the interface
 
 This is a headers-only specification of the interface.
 
-To install the interface, just copy the header files under a certain system
-headers directory (e.g. /usr/include).
-
-A template *eglexternalplatform.pc* **pkg-config** is provided along with the
-header files. It can be edited to match the location of the header files and
-copied to an appropriate **pkg-config** configuration directory (e.g.
-/usr/share/pkgconfig).
-
-A `meson.build` file is also included, which will handle installing the headers
-and generating a matching eglexternalplatform.pc file.
+A `meson.build` file is included, which will install the header files and
+generate a matching pkg-config file.
 
 Alternately, `meson.build` has the necessary `override_dependency` call to work
 as a Meson subproject.
