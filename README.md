@@ -27,6 +27,8 @@ header files. It can be edited to match the location of the header files and
 copied to an appropriate **pkg-config** configuration directory (e.g.
 /usr/share/pkgconfig).
 
+A `meson.build` file is also included, which will handle installing the headers
+and generating a matching eglexternalplatform.pc file.
 
 Definitions
 -----------
