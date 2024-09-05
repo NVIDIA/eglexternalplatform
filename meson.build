@@ -4,7 +4,8 @@ project('eglexternalplatform',
 pkg = import('pkgconfig')
 pkg.generate(filebase: 'eglexternalplatform',
   name: 'EGL External Platform interface',
-  description: 'EGL External Platform interface')
+  description: 'EGL External Platform interface',
+  install_dir: get_option('datadir') / 'pkgconfig')
 
 install_headers(
   'interface/eglexternalplatform.h',
